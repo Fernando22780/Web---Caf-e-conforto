@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café & Conforto</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b3A299; /* Cor de fundo */
+        }
+        .navbar {
+            background-color: #320000; /* Cor do cabeçalho */
+        }
+        .jumbotron {
+            background-color: #320000;
+            color: #fff;
+            padding: 100px 25px;
+            text-align: center;
+        }
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+        }
+        .card {
+            border: none;
+        }
+        .card-img-top {
+            border-radius: 15px;
+        }
+        .btn-primary {
+            background-color: #e59866; /* Cor do botão */
+            border-color: #e59866; /* Cor da borda do botão */
+        }
+        .btn-primary:hover {
+            background-color: #cb844e; /* Cor do botão ao passar o mouse */
+            border-color: #cb844e; /* Cor da borda do botão ao passar o mouse */
+        }
+        .bg-dark {
+            background-color: #320000; /* Cor do rodapé */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Café & Conforto</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="toggleMenu()">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+        <h1 class="display-3">Café & Conforto</h1>
+        <p class="lead">Desfrute de momentos agradáveis em nossa cafeteria acolhedora.</p>
+    </div>
+
+    <!-- Cards de Destaque -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/Capa-opcao.jpg" class="card-img-top" alt="Café Especial">
+                    <div class="card-body">
+                        <h2 class="card-title">Nossos Cafés Especiais</h2>
+                        <p class="card-text">Experimente nossa seleção exclusiva de cafés especiais de todo o mundo.</p>
+                        <a href="#" class="btn btn-primary" onclick="toggleMenu()">Ver Menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/pessoa-lendo-e-tomando-cafe.jpg" class="card-img-top" alt="Espaço para Leitura">
+                    <div class="card-body">
+                        <h2 class="card-title">Espaço para Leitura</h2>
+                        <p class="card-text">Relaxe com um bom livro em nosso espaço confortável dedicado à leitura.</p>
+                        <a href="#" class="btn btn-primary" onclick="toggleMenu()">Ver Ambiente</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/1675181258372701128.jpg" class="card-img-top" alt="Espaço para Trabalho">
+                    <div class="card-body">
+                        <h2 class="card-title">Espaço para Trabalho</h2>
+                        <p class="card-text">Trabalhe de forma produtiva em nosso ambiente tranquilo e inspirador.</p>
+                        <a href="#" class="btn btn-primary" onclick="toggleMenu()">Saber Mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu -->
+<section id="menu" class="py-5" style="display: none; background-color: #b3A299;">
+    <div class="container">
+        <h2 class="text-center mb-4"></h2>
+        <div class="row">
+            <div class="col-lg-6"> <!-- Coluna para os itens de Lanches -->
+                <h3>Lanches:</h3>
+                <ul class="list-unstyled">
+                    <li><strong>Pão de Queijo</strong> - R$4,00</li>
+                    <li><strong>Bolo de Chocolate</strong> - R$6,00</li>
+                    <li><strong>Sanduíche Natural</strong> - R$8,00</li>
+                    <li><strong>Torta Salgada</strong> - R$8,00</li>
+                </ul>
+            </div>
+            <div class="col-lg-6"> <!-- Coluna para os itens de Café -->
+                <h3>Cafés:</h3>
+                <ul class="list-unstyled">
+                    <li><strong>Café Expresso</strong> - R$3,00</li>
+                    <li><strong>Café Americano</strong> - R$4,00</li>
+                    <li><strong>Cappuccino</strong> - R$5,00</li>
+                    <li><strong>Macchiato</strong> - R$4,50</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="text-center py-4 bg-dark text-light">
+        <p>&copy; 2024 Café & Conforto. Todos os direitos reservados.</p>
+        <p>Telefone: (24) 992206456 | Cafeeconforto2323@gmail.com | Endereço: Rua Expedicionário Osvaldo, 280 - Centro -  Vassouras RJ</p>
+        <p><a href="https://maps.app.goo.gl/KrE8164q8ZieJimXA" target="_blank">Veja nossa localização no Google Maps</a></p>
+    </footer>
+
+    <!-- Bootstrap JS e Popper.js (dependência do Bootstrap) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "none") {
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

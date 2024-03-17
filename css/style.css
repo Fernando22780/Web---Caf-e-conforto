@@ -1,0 +1,4 @@
+.gallery img {
+    max-width: 10px; /* Definindo a largura máxima das imagens */
+    border-radius: 10px;
+}
